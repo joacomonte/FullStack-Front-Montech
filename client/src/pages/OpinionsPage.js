@@ -46,7 +46,7 @@ function OpinionsPage() {
 
 
   useEffect( () => {
-    axios.get("http://192.168.0.128:3001/posts")
+    axios.get("https://git.heroku.com/fullstack-api-montech.git/posts")
       .then( (res) => { 
         setOpinionsList(res.data)
       });
@@ -64,7 +64,7 @@ function OpinionsPage() {
 
 
   function postData(dataToSubtmit){
-    axios.post("http://192.168.0.128:3001/posts",
+    axios.post("https://git.heroku.com/fullstack-api-montech.git/posts",
     dataToSubtmit,
     {headers: {accessToken: localStorage.getItem('accessToken')}} )
       .then( (response) => {
