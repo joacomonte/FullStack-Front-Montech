@@ -29,12 +29,12 @@ function Opinion()
 
     useEffect( () => {
 
-      axios.get(`http://192.168.0.128:3001/posts/byId/${id}`)
+      axios.get(`https://git.heroku.com/fullstack-api-montech.git/posts/byId/${id}`)
         .then( (res) => { 
           setPostObj(res.data)
         });
 
-      axios.get(`http://192.168.0.128:3001/comments/${id}`)
+      axios.get(`https://git.heroku.com/fullstack-api-montech.git/comments/${id}`)
         .then( (res) => { 
           setCommentsList(res.data);
         });
