@@ -29,7 +29,7 @@ function Registration() {
 
 
     const onSubmit = (data) =>{
-        axios.post("https://git.heroku.com/fullstack-api-montech.git/auth", data).then((res)=>{
+        axios.post("https://fullstack-api-montech.herokuapp.com/auth", data).then((res)=>{
             if(res.data.error) { alert(res.data.error); }
             else {
                 alert (`El registro fue todo un exito ${data.username}!`);
