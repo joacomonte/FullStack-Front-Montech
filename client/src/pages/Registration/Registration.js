@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useLayoutEffect} from 'react';
 
 import Footer from '../../components/Footer'
 
@@ -10,9 +10,10 @@ import {useNavigate} from 'react-router-dom'
 
 
 function Registration() {
-    
-    useEffect(() => {
-    document.body.scrollTo(0, 0); });
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     let navigate = useNavigate();
 
