@@ -96,11 +96,12 @@ align-items: center; Axis Y
     position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: flex-end;
     align-items: center;
     height: 50px;
     width: 400px;
-
 }
 
 .buttonStyle-white{
