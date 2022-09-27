@@ -29,7 +29,7 @@ function Registration() {
 
 
     const onSubmit = (data) =>{
-        axios.post("http://192.168.0.128:3001/auth", data).then((res)=>{
+        axios.post("https://git.heroku.com/fullstack-api-montech.git/auth", data).then((res)=>{
             if(res.data.error) { alert(res.data.error); }
             else {
                 alert (`El registro fue todo un exito ${data.username}!`);
