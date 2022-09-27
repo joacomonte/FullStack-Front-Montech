@@ -46,7 +46,7 @@ function OpinionsPage() {
 
 
   useEffect( () => {
-    axios.get("https://git.heroku.com/fullstack-api-montech.git/posts")
+    axios.get("https://fullstack-api-montech.herokuapp.com/posts")
       .then( (res) => { 
         setOpinionsList(res.data)
       });
@@ -64,7 +64,7 @@ function OpinionsPage() {
 
 
   function postData(dataToSubtmit){
-    axios.post("https://git.heroku.com/fullstack-api-montech.git/posts",
+    axios.post("https://fullstack-api-montech.herokuapp.com/posts",
     dataToSubtmit,
     {headers: {accessToken: localStorage.getItem('accessToken')}} )
       .then( (response) => {
