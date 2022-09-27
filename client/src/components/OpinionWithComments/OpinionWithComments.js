@@ -20,7 +20,7 @@ function OpinionWithComments(props) {
   useEffect( () => {
 
 
-    axios.get(`http://192.168.0.128:3001/comments/${id}`)
+    axios.get(`https://git.heroku.com/fullstack-api-montech.git/comments/${id}`)
       .then( (res) => { 
         setCommentsList(res.data);
       });
@@ -28,7 +28,7 @@ function OpinionWithComments(props) {
 
 
   const deleteCommentFunc = (id) =>{
-    axios.delete(`http://192.168.0.128:3001/comments/${id}`,
+    axios.delete(`https://git.heroku.com/fullstack-api-montech.git/comments/${id}`,
         {headers: {accessToken: localStorage.getItem("accessToken")}}
         ).then(setTimeout(() => 
         {
@@ -40,7 +40,7 @@ function OpinionWithComments(props) {
 
 
   const addComment = () => {
-    axios.post("http://192.168.0.128:3001/comments/", 
+    axios.post("https://git.heroku.com/fullstack-api-montech.git/comments/", 
       {
         commentBody: newComment,
         PostId: id
