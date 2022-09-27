@@ -20,7 +20,7 @@ function App(){
     const[authState, setAuthState] = useState({username:"", id: 0, status: false});
 
     useEffect( () => {
-            axios.get('http://192.168.0.128:3001/auth/token',
+            axios.get('https://git.heroku.com/fullstack-api-montech.git/auth/token',
             {headers:{accessToken: localStorage.getItem("accessToken")}}
             ).then( (res) => {
                     if (res.data.error) { setAuthState( {...authState, status:false} )} //destruct the obj and only change the status
