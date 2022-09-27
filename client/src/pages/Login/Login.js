@@ -35,7 +35,7 @@ function Login() {
 
     const onSubmit = (argData) =>{
       const data = {username: argData.username, password: argData.password}
-        axios.post("http://192.168.0.128:3001/auth/login", data).then((res)=>{
+        axios.post("https://git.heroku.com/fullstack-api-montech.git/auth/login", data).then((res)=>{
             if(res.data.error) { alert(res.data.error); }
             else 
             {
