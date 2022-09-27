@@ -20,7 +20,7 @@ function OpinionWithComments(props) {
   useEffect( () => {
 
 
-    axios.get(`https://git.heroku.com/fullstack-api-montech.git/comments/${id}`)
+    axios.get(`https://fullstack-api-montech.herokuapp.com/comments/${id}`)
       .then( (res) => { 
         setCommentsList(res.data);
       });
@@ -28,7 +28,7 @@ function OpinionWithComments(props) {
 
 
   const deleteCommentFunc = (id) =>{
-    axios.delete(`https://git.heroku.com/fullstack-api-montech.git/comments/${id}`,
+    axios.delete(`https://fullstack-api-montech.herokuapp.com/comments/${id}`,
         {headers: {accessToken: localStorage.getItem("accessToken")}}
         ).then(setTimeout(() => 
         {
@@ -40,7 +40,7 @@ function OpinionWithComments(props) {
 
 
   const addComment = () => {
-    axios.post("https://git.heroku.com/fullstack-api-montech.git/comments/", 
+    axios.post("https://fullstack-api-montech.herokuapp.com/comments/", 
       {
         commentBody: newComment,
         PostId: id
