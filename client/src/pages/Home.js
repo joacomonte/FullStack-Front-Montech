@@ -33,7 +33,7 @@ function Home() {
     <>
         <div className='homePage-container'>
             <div className="main-container">
-                {(authState.status) && <div style={{position:'absolute', top:'50px',textAlign:'center'}} className="montechLetras">¡Hola {authState.username}!</div>}
+                {(authState.status) && <div style={{position:'absolute', top:'50px',textAlign:'center'}} className="saludoLetras">¡Hola {authState.username}!</div>}
                 <img className="main-image" src={mLogo} alt="hola"></img>
             </div>
 
