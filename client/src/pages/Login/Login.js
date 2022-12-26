@@ -40,7 +40,7 @@ function Login() {
 
     const onSubmit = (argData) =>{
       const data = {username: argData.username, password: argData.password}
-        axios.post("https://fullstack-api-montech.herokuapp.com/auth/login", data).then((res)=>{
+        axios.post("https://montech-back.onrender.com/auth/login", data).then((res)=>{
             if(res.data.error) { alert(res.data.error); }
             else 
             {
