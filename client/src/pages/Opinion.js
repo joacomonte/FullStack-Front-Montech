@@ -29,12 +29,12 @@ function Opinion()
 
     useEffect( () => {
 
-      axios.get(`https://fullstack-api-montech.herokuapp.com/posts/byId/${id}`)
+      axios.get(`https://montech-back.onrender.com/posts/byId/${id}`)
         .then( (res) => { 
           setPostObj(res.data)
         });
 
-      axios.get(`https://fullstack-api-montech.herokuapp.com/comments/${id}`)
+      axios.get(`https://montech-back.onrender.com/comments/${id}`)
         .then( (res) => { 
           setCommentsList(res.data);
         });

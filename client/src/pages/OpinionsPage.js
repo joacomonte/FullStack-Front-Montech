@@ -46,7 +46,7 @@ function OpinionsPage() {
 
 
   useEffect( () => {
-    axios.get("https://fullstack-api-montech.herokuapp.com/posts")
+    axios.get("https://montech-back.onrender.com/posts")
       .then( (res) => { 
         setOpinionsList(res.data)
       });
@@ -64,7 +64,7 @@ function OpinionsPage() {
 
 
   function postData(dataToSubtmit){
-    axios.post("https://fullstack-api-montech.herokuapp.com/posts",
+    axios.post("https://montech-back.onrender.com/posts",
     dataToSubtmit,
     {headers: {accessToken: localStorage.getItem('accessToken')}} )
       .then( (response) => {

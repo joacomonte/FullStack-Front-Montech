@@ -17,7 +17,7 @@ function OpinionItem(props) {
     useEffect(() => {
         if(props.id && authState.status){
             axios.post(
-                "https://fullstack-api-montech.herokuapp.com/likes/a",
+                "https://montech-back.onrender.com/likes/a",
                 {PostId: props.id},
                 { headers: {accessToken: localStorage.getItem("accessToken")}}
             ).then( (res) => {
@@ -30,7 +30,7 @@ function OpinionItem(props) {
 
     const likeOpinion = (argId) =>{
         axios.post(
-            "https://fullstack-api-montech.herokuapp.com/likes",
+            "https://montech-back.onrender.com/likes",
             {PostId: argId},
             { headers: {accessToken: localStorage.getItem("accessToken")}}
         ).then( (res) => {
@@ -43,7 +43,7 @@ function OpinionItem(props) {
 
 
     const deletePostFunc = (id) =>{
-            axios.delete(`https://git.heroku.com/fullstack-api-montech.git/posts/${id}`,
+            axios.delete(`https://montech-back.onrender.com/posts/${id}`,
                 {headers: {accessToken: localStorage.getItem("accessToken")}}
                 ).then(setTimeout(() => {
                      props.handleFunc()}, 100));
